@@ -1,0 +1,13 @@
+image: ubuntu:latest
+tasks:
+    command: |
+      sudo pip3 install molecule[docker] ansible
+      echo 'test'
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    addCheck: true
+    addComment: true
+    addBadge: true
