@@ -1,7 +1,8 @@
 image: ubuntu:latest
 tasks:
-    init: sudo apt update -y
-    command: sudo pip3 install molecule[docker] ansible
+    - name: bootstrap
+      init: sudo apt update -y
+      command: sudo pip3 install molecule[docker] ansible
 github:
   prebuilds:
     master: true
